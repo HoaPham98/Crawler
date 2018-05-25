@@ -1,0 +1,3 @@
+.vscode/
+movies/__pycache__/
+movies/spiders/__pycache__/

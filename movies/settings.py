@@ -15,7 +15,7 @@ SPIDER_MODULES = ['movies.spiders']
 NEWSPIDER_MODULE = 'movies.spiders'
 
 # MongoDB
-MONGO_URI = "localhost:27017"
+MONGO_URI = "mongodb+srv://admin:haha@hp98-jfj40.mongodb.net/test?retryWrites=true"
 MONGO_DATABASE = "ESPMovie"
 
 
@@ -23,7 +23,7 @@ MONGO_DATABASE = "ESPMovie"
 USER_AGENT = 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.84 Safari/537.36'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -34,10 +34,10 @@ ROBOTSTXT_OBEY = True
 #DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 50
-#CONCURRENT_REQUESTS_PER_IP = 16
+CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = True
+# COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -62,7 +62,7 @@ COOKIES_ENABLED = True
 DOWNLOADER_MIDDLEWARES = {
    'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
    'movies.middlewares.ProxyMiddleware': 100,
-   'movies.middlewares.RetryMiddleware': 200,   
+#   'movies.middlewares.RetryMiddleware': 200,
 }
 
 # Enable or disable extensions

@@ -7,7 +7,6 @@
 
 import scrapy
 import pymongo
-from proxybroker import Broker
 
 class MoviesPipeline(object):
 
